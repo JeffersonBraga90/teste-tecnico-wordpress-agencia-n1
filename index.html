@@ -11,26 +11,35 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container header-content">
+ <header class="header">
+  <div class="container header-content">
+    <div class="header-wrapper">
       <a href="/" class="logo"> 
         <img src="assets/logo.svg" alt="N1.AG"> 
       </a>
 
-      <nav class="nav" id="nav">
-        <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Cases</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-
-      <a href="#" class="btn btn-primary desktop-only">Fale Conosco</a>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <button class="menu-toggle" id="menu-toggle">
+        <img src="assets/icon-menu-hamburguer.svg" alt="Abrir menu" class="icon-hamburger">
+        <img src="assets/icon-close.png" alt="Fechar menu" class="icon-close">
+      </button>
     </div>
-  </header>
+
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Cases</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contato</a></li>
+
+        <a href="#" class="btn btn-primary mobile-only">Fale Conosco</a>
+      </ul>
+   </nav>
+   
+    <a href="#" class="btn btn-primary desktop-only">Fale Conosco</a>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section class="hero">

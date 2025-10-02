@@ -1,5 +1,5 @@
 // Menu Mobile
-const toggle = document.getElementById("menu-toggle");
+/* const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav");
 
 toggle.addEventListener("click", () => {
@@ -9,4 +9,12 @@ toggle.addEventListener("click", () => {
   } else {
     nav.style.display = "none";
   }
+}); */
+
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  menuToggle.classList.toggle("active");
 });

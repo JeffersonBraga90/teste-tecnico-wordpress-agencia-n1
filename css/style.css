@@ -1,5 +1,10 @@
 /* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
 body {
   font-family: "Public Sans", sans-serif;
   color: #4A5565;
@@ -21,17 +26,97 @@ body {
   top: 0;
   z-index: 1000;
 }
-.header-content {
+
+.header .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+  flex-direction: column;
 }
-.nav { display: none; }
-.nav ul { list-style: none; display: flex; gap: 2rem; }
-.nav a { text-decoration: none; color: #09235C; font-weight: 600; }
-.menu-toggle { font-size: 1.8rem; background: none; border: none; cursor: pointer; color: #09235C; }
-.desktop-only { display: none; }
+
+.header .header-wrapper {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.header .header-wrapper .icon-close {
+  width: 20px;
+  height: 20px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.nav ul { 
+  list-style: none; 
+  display: flex; 
+  flex-direction: column;
+  gap: 2rem; 
+  text-align: center;
+}
+
+.desktop-only { 
+  display: none; 
+}
+
+.nav a { 
+  text-decoration: none; 
+  color: #09235C; 
+  font-weight: 600; 
+}
+
+.nav.active {
+  right: 0; 
+}
+
+.menu-toggle { 
+  font-size: 1.8rem; 
+  background: none; 
+  border: none; 
+  cursor: pointer; 
+  color: #09235C; 
+}
+
+.menu-toggle .icon-close {
+  display: none;
+}
+
+.menu-toggle.active .icon-hamburger {
+  display: none;
+}
+
+.menu-toggle.active .icon-close {
+  display: inline;
+}
+
+.menu-toggle.active .icon-close {
+    display: inline;
+    position: relative;
+    z-index: 1000;
+}
+
+.menu-toggle.active .icon-hamburger {
+    display: none;
+}
+
+.menu-toggle.active .icon-close {
+    display: inline;
+    position: relative;
+    z-index: 1000;
+}
 
 /* HERO */
 .hero {
@@ -238,7 +323,7 @@ h2 {
   font-size: 0.875rem; 
 }
 
-ul li::before {
+.card ul li::before {
   content: "•";
   position: absolute;
   left: -16px; 
@@ -646,7 +731,7 @@ ul li::before {
 
 /* BOTÕES */
 .btn {
-  display: inline-block;
+ /*  display: inline-block; */
   padding: 0.8rem 1.6rem;
   border-radius: 8px;
   text-decoration: none;
@@ -663,9 +748,36 @@ ul li::before {
 
 /* RESPONSIVIDADE - Desktop */
 @media (min-width: 768px) {
-  .nav { display: block !important; }
+  /* .nav { display: block !important; } */
   .menu-toggle { display: none; }
-  .desktop-only { display: inline-block; }
+  
+  .header .header-content {
+    flex-direction: row; 
+  }
+
+  .nav { 
+    position: static; 
+    left: auto;
+    width: auto;
+    height: auto;
+    background: none;
+    display: block; 
+    transition: none;
+  }
+
+  .nav ul { 
+    flex-direction: row;
+    gap: 2rem; 
+    text-align: left;
+  }
+
+  .desktop-only { 
+    display: inline-block; 
+  }
+
+  .mobile-only {
+    display: none;
+  }
 
   .hero-content {
     display: flex;
