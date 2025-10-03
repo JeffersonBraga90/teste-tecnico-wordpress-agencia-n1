@@ -1,44 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>N1.AG - Soluções Digitais</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header -->
- <header class="header">
-  <div class="container header-content">
-    <div class="header-wrapper">
-      <a href="/" class="logo"> 
-        <img src="assets/logo.svg" alt="N1.AG"> 
-      </a>
+<!-- Header -->
+<?php 
+// Template name: Inicio
+get_header(); 
+?>
 
-      <button class="menu-toggle" id="menu-toggle">
-        <img src="assets/icon-menu-hamburguer.svg" alt="Abrir menu" class="icon-hamburger">
-        <img src="assets/icon-close.png" alt="Fechar menu" class="icon-close">
-      </button>
-    </div>
-
-    <nav class="nav" id="nav">
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#cases">Cases</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contato">Contato</a></li>
-
-        <a href="#" class="btn btn-primary mobile-only">Fale Conosco</a>
-      </ul>
-   </nav>
-   
-    <a href="#" class="btn btn-primary desktop-only">Fale Conosco</a>
-  </div>
-</header>
+<?php if (have_posts()) { while (have_posts()) {
+  the_post(); ?>
 
 
   <!-- Hero -->
@@ -52,27 +19,27 @@
           </p>
           <a href="#" class="btn btn-primary">
             Conheça nossas soluções  
-            <img src="/assets/icon-arrow-right-blue.svg" alt="Icone seta para direita">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right-blue.svg" alt="Icone seta para direita">
           </a>
         </div>
         <div class="hero-solutions">
           <div class="hero-solutions-item">
-            <img src="assets/cloud.svg" alt="Icone cloud computing" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/cloud.svg" alt="Icone cloud computing" />
             <p>Cloud Computing</p>
           </div>
           <div class="hero-solutions-item">
-            <img src="assets/inteligencia-artifical.svg" alt="Icone inteligencia artificial " />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/inteligencia-artifical.svg" alt="Icone inteligencia artificial " />
             <p>Inteligência Artificial</p>
           </div>
           <div class="hero-solutions-item">
-            <img src="assets/integracoes.svg" alt="Icone integrações" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/integracoes.svg" alt="Icone integrações" />
             <p>Integrações</p>
           </div>
         </div>
       </div>
       <div class="hero-img">
-        <img src="assets/hero-mobile.png" alt="Apresentação" class="hero-img-mobile" />
-        <img src="assets/hero.png" alt="Apresentação" class="hero-img-desktop" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/hero-mobile.png" alt="Apresentação" class="hero-img-mobile" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/hero.png" alt="Apresentação" class="hero-img-desktop" />
       </div>
     </div>
   </section>
@@ -82,8 +49,8 @@
     <div class="container">
       <div class="wrapper">
       <div class="sobre-img">
-        <img src="assets/sobre-mobile.png" alt="Sobre a N1" class="sobre-img-mobile" />
-        <img src="assets/sobre.png" alt="Sobre a N1" class="sobre-img-desktop" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/sobre-mobile.png" alt="Sobre a N1" class="sobre-img-mobile" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/sobre.png" alt="Sobre a N1" class="sobre-img-desktop" />
       </div>
       <div class="sobre-right">
         <h2>Sobre a N1.AG</h2>
@@ -117,7 +84,7 @@
       </div>
       <div class="sobre-valores">
         <div class="sobre-valores-item">
-          <img src="assets/icon-missao.svg" alt="Icone missão" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-missao.svg" alt="Icone missão" />
           <h3>Missão</h3>
           <p>
             Democratizar o acesso à tecnologia avançada, oferecendo soluções 
@@ -125,7 +92,7 @@
           </p>
         </div>
         <div class="sobre-valores-item">
-          <img src="assets/icon-visao.svg" alt="Icone visão" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-visao.svg" alt="Icone visão" />
           <h3>Visão</h3>
           <p>
             Ser referência em inovação tecnológica, criando um futuro digital 
@@ -133,7 +100,7 @@
           </p>
         </div>
         <div class="sobre-valores-item">
-          <img src="/assets/icon-valores.svg" alt="Icone valores" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-valores.svg" alt="Icone valores" />
           <h3>Valores</h3>
           <p>
             Excelência, transparência, inovação contínua e compromisso total 
@@ -154,7 +121,7 @@
       </p>
       <div class="grid">
         <div class="card">
-          <img src="assets/icon-desenvolvimento.svg" alt="Icone desenvolvimento">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-desenvolvimento.svg" alt="Icone desenvolvimento">
           <h3>Desenvolvimento</h3>
           <p>
             Aplicações web e mobile modernas, escaláveis e performáticas, 
@@ -168,11 +135,11 @@
           </ul>
           <button>
             Saiba mais 
-            <img src="/assets/icon-arrow-right.svg" alt="Icone seta para direita">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right.svg" alt="Icone seta para direita">
           </button>
         </div>
         <div class="card">
-          <img src="assets/icon-integracoes.svg" alt="Icone integrações">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-integracoes.svg" alt="Icone integrações">
           <h3>Integrações</h3>
           <p>
             Conectamos seus sistemas de forma inteligente, automatizando 
@@ -186,11 +153,11 @@
           </ul>
            <button>
             Saiba mais 
-            <img src="/assets/icon-arrow-right.svg" alt="Icone seta para direita">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right.svg" alt="Icone seta para direita">
           </button>
         </div>
         <div class="card">
-          <img src="assets/icon-cloud.svg" alt="Icone cloud computing">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-cloud.svg" alt="Icone cloud computing">
           <h3>Cloud Computing</h3>
           <p>
             Migração e otimização de infraestrutura em nuvem para máxima 
@@ -204,11 +171,11 @@
           </ul>
            <button>
             Saiba mais 
-            <img src="/assets/icon-arrow-right.svg" alt="Icone seta para direita">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right.svg" alt="Icone seta para direita">
           </button>
         </div>
         <div class="card">
-          <img src="assets/icon-consultoria.svg" alt="Icone consultoria">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-consultoria.svg" alt="Icone consultoria">
           <h3>Consultoria</h3>
           <p>
             Estratégias personalizadas de transformação digital para acelerar 
@@ -222,7 +189,7 @@
           </ul>
            <button>
             Saiba mais 
-            <img src="/assets/icon-arrow-right.svg" alt="Icone seta para direita">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right.svg" alt="Icone seta para direita">
           </button>
         </div>
         
@@ -248,14 +215,14 @@
       <div class="grid">
         <div class="card"> 
           <div class="card-icon-aspas">
-             <img src="assets/icon-aspas-duplas.svg" alt="Icone aspas duplas" />
+             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-aspas-duplas.svg" alt="Icone aspas duplas" />
           </div>
           <div class="card-stars">
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
           </div>
           <p>
             “A TechInova transformou completamente nossa infraestrutura digital. 
@@ -276,14 +243,14 @@
         </div>
         <div class="card"> 
           <div class="card-icon-aspas">
-             <img src="assets/icon-aspas-duplas.svg" alt="Icone aspas duplas" />
+             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-aspas-duplas.svg" alt="Icone aspas duplas" />
           </div>
           <div class="card-stars">
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
           </div>
           <p>
             “Profissionalismo exemplar e soluções que realmente funcionam. 
@@ -304,14 +271,14 @@
         </div>
         <div class="card"> 
           <div class="card-icon-aspas">
-             <img src="assets/icon-aspas-duplas.svg" alt="Icone aspas duplas" />
+             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-aspas-duplas.svg" alt="Icone aspas duplas" />
           </div>
           <div class="card-stars">
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
-            <img src="assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-star.svg" alt="Icone estrela" />
           </div>
           <p>
             “Equipe altamente qualificada que entende as necessidades do negócio. 
@@ -345,17 +312,17 @@
         <div class="post"> 
           <div class="post-information-img">
             <span>Desenvolvimento</span>
-            <img src="assets/image-futuro-desenvolvimento.png" alt="Imagem blog futuro desenvolvimento"> 
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/image-futuro-desenvolvimento.png" alt="Imagem blog futuro desenvolvimento"> 
           </div>
           
           <div class="post-data">
               <ul>
                 <li>
-                  <img src="/assets/icon-user-blog.svg" alt="Icone usuário" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-user-blog.svg" alt="Icone usuário" />
                   <span>João Silva</span>
                 </li>
                 <li>
-                  <img src="/assets/icon-calendar-blog.svg" alt="Icone calendario" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-calendar-blog.svg" alt="Icone calendario" />
                   <span>15 Set 2024</span>
                 </li>
                 <li>
@@ -369,24 +336,24 @@
               </p>
               <button>
                 Ler mais
-                <img src="assets/icon-arrow-right.svg" alt="Icone seta direita" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right.svg" alt="Icone seta direita" />
               </button>
           </div> 
         </div>
         <div class="post"> 
           <div class="post-information-img">
             <span>Inteligência Artificial</span>
-            <img src="assets/image-ia-generativa.png" alt="Imagem IA generativa"> 
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/image-ia-generativa.png" alt="Imagem IA generativa"> 
           </div>
           
           <div class="post-data">
               <ul>
                 <li>
-                  <img src="/assets/icon-user-blog.svg" alt="Icone usuário" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-user-blog.svg" alt="Icone usuário" />
                   <span>Maria Santos</span>
                 </li>
                 <li>
-                  <img src="/assets/icon-calendar-blog.svg" alt="Icone calendario" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-calendar-blog.svg" alt="Icone calendario" />
                   <span>10 Set 2024</span>
                 </li>
                 <li>
@@ -400,24 +367,24 @@
               </p>
               <button>
                 Ler mais
-                <img src="assets/icon-arrow-right.svg" alt="Icone seta direita" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right.svg" alt="Icone seta direita" />
               </button>
           </div> 
         </div>
         <div class="post"> 
           <div class="post-information-img">
             <span>Cloud Computing</span>
-            <img src="assets/image-seguranca-cloud.png" alt="Imagem segurança em cloud"> 
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/image-seguranca-cloud.png" alt="Imagem segurança em cloud"> 
           </div>
           
           <div class="post-data">
               <ul>
                 <li>
-                  <img src="/assets/icon-user-blog.svg" alt="Icone usuário" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-user-blog.svg" alt="Icone usuário" />
                   <span>Carlos Oliveira</span>
                 </li>
                 <li>
-                  <img src="/assets/icon-calendar-blog.svg" alt="Icone calendario" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-calendar-blog.svg" alt="Icone calendario" />
                   <span>5 Set 2024</span>
                 </li>
                 <li>
@@ -431,146 +398,18 @@
               </p>
               <button>
                 Ler mais
-                <img src="assets/icon-arrow-right.svg" alt="Icone seta direita" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right.svg" alt="Icone seta direita" />
               </button>
           </div> 
         </div>
       </div>
       <button>
         Ver todos os artigos
-        <img src="/assets/icon-arrow-right-blue.svg" alt="Icone seta para direita" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-arrow-right-blue.svg" alt="Icone seta para direita" />
       </button>
     </div>
   </section>
 
+  <?php }; }; ?> 
   <!-- Footer -->
-  <footer class="footer" id="contato">
-    <div class="container">
-      <div class="footer-section">
-        <div class="footer-section-address">
-          <img src="assets/logo-footer.svg" alt="N1.AG">
-          <p>
-            Transformando ideias em soluções digitais inovadoras. Sua parceira
-            estratégica na jornada de transformação digital.
-          </p>
-          <ul>
-            <li>
-              <img src="assets/icon-localizacao.svg" alt="Icone de localização" />
-              <span>São Paulo, SP - Brasil</span>
-            </li>
-            <li>
-              <img src="assets/icon-phone.svg" alt="Icone de telefone" />
-              <a href="#">
-                <span>+55 (11) 9999-9999</span>
-              </a>
-            </li>
-            <li>
-              <img src="assets/icone-envelope.svg" alt="Icone de email" />
-              <a href="#">
-                <span>contato@techinova.com.br</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-section-link">
-          <h3>Links Rápidos</h3>
-          <ul>
-            <li>
-              <a href="#">Sobre Nós</a>
-            </li>
-            <li>
-              <a href="#">Serviços</a>
-            </li>
-            <li>
-              <a href="#">Cases</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Carreiras</a>
-            </li>
-            <li>
-              <a href="#">Contato</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-section-link">
-          <h3>Serviços</h3>
-          <ul>
-            <li>
-              <a href="#">Desenvolvimento Web</a>
-            </li>
-            <li>
-              <a href="#">Aplicativos Mobile</a>
-            </li>
-            <li>
-              <a href="#">Cloud Computing</a>
-            </li>
-            <li>
-              <a href="#">Integrações</a>
-            </li>
-            <li>
-              <a href="#">Consultoria em TI</a>
-            </li>
-            <li>
-              <a href="#">Transformação Digital</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-newsletter">
-          <h3>Newsletter</h3>
-          <p>Receba insights exclusivos sobre tecnologia e inovação</p>
-          <form>
-            <input type="email" placeholder="Seu-email" />
-            <button>Assinar</button>
-          </form>
-
-          <div class="footer-social-media">
-            <h4>Siga-nos</h4>
-            <ul>
-              <li>
-                <a href="#">
-                  <img src="/assets/icon-linkedin.svg" alt="Icone linkedin" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="/assets/icon-github.svg" alt="Icone github" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="/assets/icon-x.svg" alt="Icone X" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="/assets/icon-instagram.svg" alt="Icone instagram" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-copyright">
-        <p>© 2024 TechInova. Todos os direitos reservados.</p>
-        <ul>
-          <li>
-            <a href="#">Política de Privacidade</a>
-          </li>
-          <li>
-            <a href="#">Termos de Uso</a>
-          </li>
-          <li>
-            <a href="#">Cookies</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
-</html>
+ <?php get_footer(); ?>
