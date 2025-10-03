@@ -26,11 +26,11 @@
 
     <nav class="nav" id="nav">
       <ul>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Cases</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contato">Contato</a></li>
 
         <a href="#" class="btn btn-primary mobile-only">Fale Conosco</a>
       </ul>
@@ -44,42 +44,46 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Transformamos <span>ideias</span> em soluções digitais</h1>
-        <p>Impulsionamos seu negócio com tecnologia de ponta, integrações 
-          inteligentes e inovação contínua.
-        </p>
-        <a href="#" class="btn btn-primary">
-          Conheça nossas soluções  
-          <img src="/assets/icon-arrow-right-blue.svg" alt="Icone seta para direita">
-        </a>
-      </div>
-      <div class="hero-solutions">
-        <div class="hero-solutions-item">
-          <img src="assets/cloud.svg" alt="Icone cloud computing" />
-          <p>Cloud Computing</p>
+      <div class="hero-wrapper">
+        <div class="hero-text">
+          <h1>Transformamos <span>ideias</span> em soluções digitais</h1>
+          <p>Impulsionamos seu negócio com tecnologia de ponta, integrações 
+            inteligentes e inovação contínua.
+          </p>
+          <a href="#" class="btn btn-primary">
+            Conheça nossas soluções  
+            <img src="/assets/icon-arrow-right-blue.svg" alt="Icone seta para direita">
+          </a>
         </div>
-        <div class="hero-solutions-item">
-          <img src="assets/inteligencia-artifical.svg" alt="Icone inteligencia artificial " />
-          <p>Inteligência Artificial</p>
-        </div>
-        <div class="hero-solutions-item">
-          <img src="assets/integracoes.svg" alt="Icone integrações" />
-          <p>Integrações</p>
+        <div class="hero-solutions">
+          <div class="hero-solutions-item">
+            <img src="assets/cloud.svg" alt="Icone cloud computing" />
+            <p>Cloud Computing</p>
+          </div>
+          <div class="hero-solutions-item">
+            <img src="assets/inteligencia-artifical.svg" alt="Icone inteligencia artificial " />
+            <p>Inteligência Artificial</p>
+          </div>
+          <div class="hero-solutions-item">
+            <img src="assets/integracoes.svg" alt="Icone integrações" />
+            <p>Integrações</p>
+          </div>
         </div>
       </div>
       <div class="hero-img">
-        <img src="assets/hero-mobile.png" alt="Apresentação">
+        <img src="assets/hero-mobile.png" alt="Apresentação" class="hero-img-mobile" />
+        <img src="assets/hero.png" alt="Apresentação" class="hero-img-desktop" />
       </div>
     </div>
   </section>
 
   <!-- Sobre -->
-  <section class="sobre">
+  <section class="sobre" id="sobre">
     <div class="container">
       <div class="wrapper">
       <div class="sobre-img">
-        <img src="assets/sobre-mobile.png" alt="Sobre a N1">
+        <img src="assets/sobre-mobile.png" alt="Sobre a N1" class="sobre-img-mobile" />
+        <img src="assets/sobre.png" alt="Sobre a N1" class="sobre-img-desktop" />
       </div>
       <div class="sobre-right">
         <h2>Sobre a N1.AG</h2>
@@ -88,23 +92,28 @@
           Nossa equipe multidisciplinar trabalha com paixão para entregar resultados excepcionais.
         </p>
         <div class="stats">
-          <div class="stats-item">
-            <strong>150+</strong>
-            <p>Projetos Entregues</p>
+          <div class="stats-top">
+            <div class="stats-item">
+              <strong>150+</strong>
+              <p>Projetos Entregues</p>
+            </div>
+            <div class="stats-item">
+              <strong>5</strong>
+              <p>Anos de Experiência</p>
+            </div>
           </div>
-          <div class="stats-item">
-            <strong>98%</strong>
-            <p>Satisfação do Cliente</p>
-          </div>
-          <div class="stats-item">
-            <strong>5</strong>
-            <p>Anos de Experiência</p>
-          </div>
-          <div class="stats-item">
-            <strong>50+</strong>
-            <p>Clientes Ativos</p>
-          </div>
+          <div class="stats-bottom">
+            <div class="stats-item">
+              <strong>98%</strong>
+              <p>Satisfação do Cliente</p>
+            </div>
+            <div class="stats-item">
+              <strong>50+</strong>
+              <p>Clientes Ativos</p>
+            </div>
+         </div>
         </div>
+      </div>
       </div>
       <div class="sobre-valores">
         <div class="sobre-valores-item">
@@ -132,12 +141,11 @@
           </p>
         </div>
       </div>
-      </div>
     </div>
   </section>
 
   <!-- Serviços -->
-  <section class="servicos">
+  <section class="servicos" id="servicos">
     <div class="container">
       <h2>Nossos Serviços</h2>
       <p>
@@ -218,20 +226,20 @@
           </button>
         </div>
         
-        <div class="cta-card">
-          <h2>Pronto para transformar seu negócio?</h2>
-          <p>
-            Entre em contato conosco e descubra como podemos acelerar sua jornada
-            de transformação digital
-          </p>
-          <a href="#" class="btn btn-primary">Conversar com especialista</a>
-       </div>
       </div>
+      <div class="cta-card">
+        <h2>Pronto para transformar seu negócio?</h2>
+        <p>
+          Entre em contato conosco e descubra como podemos acelerar sua jornada
+          de transformação digital
+        </p>
+        <a href="#" class="btn btn-primary">Conversar com especialista</a>
+     </div>
     </div>
   </section>
 
   <!-- Cases -->
-  <section class="cases">
+  <section class="cases" id="cases">
     <div class="container">
       <h2>Cases de Sucesso</h2>
       <p>
@@ -326,7 +334,7 @@
   </section>
 
   <!-- Blog -->
-  <section class="blog">
+  <section class="blog" id="blog">
     <div class="container">
       <h2>Insights & Blog</h2>
       <p>
@@ -427,16 +435,16 @@
               </button>
           </div> 
         </div>
-        <button>
-          Ver todos os artigos
-          <img src="/assets/icon-arrow-right-blue.svg" alt="Icone seta para direita" />
-        </button>
       </div>
+      <button>
+        Ver todos os artigos
+        <img src="/assets/icon-arrow-right-blue.svg" alt="Icone seta para direita" />
+      </button>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" id="contato">
     <div class="container">
       <div class="footer-section">
         <div class="footer-section-address">
